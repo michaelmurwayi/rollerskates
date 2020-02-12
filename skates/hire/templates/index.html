@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +9,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{ % static  'styles/css/bootstrap.min.css' %}" >
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet"  href="{ % static  'styles/css/mdb.min.css' %}">
     <!-- Your custom styles (optional) -->
-    <link href="css/style.min.css" rel="stylesheet">
+    <link  rel="stylesheet" href="{ % static 'styles/css/style.min.css' %}">
     <style type="text/css">
         html,
         body,
@@ -423,11 +424,6 @@
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- Initializations -->
-<script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
-
-</script>
     </body>
     </html>
 
