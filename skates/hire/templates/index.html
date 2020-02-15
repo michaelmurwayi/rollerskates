@@ -9,11 +9,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{ % static  'styles/css/bootstrap.min.css' %}" >
+        <link rel="stylesheet" href= "{% static '/styles/css/bootstrap.min.css' %}" >
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet"  href="{ % static  'styles/css/mdb.min.css' %}">
+    <link rel="stylesheet"  href= "{% static  'styles/css/mdb.min.css' %}">
     <!-- Your custom styles (optional) -->
-    <link  rel="stylesheet" href="{ % static 'styles/css/style.min.css' %}">
+    <link  rel="stylesheet" href="{% static 'styles/css/style.min.css' %}">
     <style type="text/css">
         html,
         body,
@@ -47,6 +47,13 @@
                 background: #929FBA !important;
             }
         }
+        .footer{
+            text-align: center;
+        }
+        .copyright{
+            text-align: center;
+        }
+
     </style>
 </head>
 
@@ -125,7 +132,7 @@
                 <!--First slide-->
                 <div class="carousel-item active">
                     <div class="view"
-                        style="background-image: url('img/header1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                        style="background-image: url('{% static 'images/header1.jpg' %}'); background-repeat: no-repeat; background-size: cover; background-position: center;">
 
                         <!-- Mask & flexbox options-->
                         <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -149,7 +156,7 @@
                 <!--Second slide-->
                 <div class="carousel-item">
                     <div class="view"
-                        style="background-image: url('img/header2.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                        style="background-image: url('{% static 'images/header2.jpg'%}'); background-repeat: no-repeat; background-size: cover; background-position: center;">
 
                         <!-- Mask & flexbox options-->
                         <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -170,7 +177,7 @@
                 <!--Third slide-->
                 <div class="carousel-item">
                     <div class="view"
-                        style="background-image: url('img/header3.jpg'); background-repeat: no-repeat; background-size: cover;">
+                        style="background-image: url('{% static 'images/header3.jpg' %}'); background-repeat: no-repeat; background-size: cover;">
 
                         <!-- Mask & flexbox options-->
                         <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
@@ -220,7 +227,7 @@
                     <!--Grid column-->
                     <div class="col-md-6 mb-4">
     
-                        <img src="img/intro.jpg"
+                        <img src="{% static 'images/intro.jpg'%}"
                             class="img-fluid z-depth-1-half" alt="">
     
                     </div>
@@ -328,86 +335,13 @@
         </section>
     </div>
     <!-- Footer -->
-    <footer class="page-footer font-small blue pt-4">
+    <footer class="footer font-small black p-4">
     
         <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
-    
-            <!-- Grid row -->
-            <div class="row">
-    
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
-    
-                    <!-- Content -->
-                    <h5 class="text-uppercase">Footer Content</h5>
-                    <p>Here you can use rows and columns to organize your footer content.</p>
-    
-                </div>
-                <!-- Grid column -->
-    
-                <hr class="clearfix w-100 d-md-none pb-3">
-    
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-    
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Links</h5>
-    
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
-    
-                </div>
-                <!-- Grid column -->
-    
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-    
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Links</h5>
-    
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
-    
-                </div>
-                <!-- Grid column -->
-    
-            </div>
-            <!-- Grid row -->
-    
-        </div>
-        <!-- Footer Links -->
-    
+        <div class=" copyright container-fluid text-center text-md-left">
+            <h4>© 2020 Copyright:<a href="https://mdbootstrap.com/education/bootstrap/"> huncho.com</a></h4>
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    
+    </div>
     </footer>
     <!-- Footer -->
             
@@ -416,13 +350,13 @@
 
 <!-- SCRIPTS -->
 <!-- JQuery -->
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="{% static  'js/jquery-3.4.1.min.js' %}"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="js/popper.min.js"></script>
+<script type="text/javascript" src="{% static  'js/popper.min.js' %}"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static  'js/bootstrap.min.js' %}"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="{% static  'js/mdb.min.js' %}"></script>
 <!-- Initializations -->
     </body>
     </html>

@@ -16,10 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
-from django.contrib.staticfiles import views
-from django.urls import re_path
 from hire.views import HomeView
-from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,7 +25,3 @@ urlpatterns = [
     path('signup/', TemplateView.as_view(template_name='signup.html')),
 
 ]
-if settings.DEBUG:
-    urlpatterns += [
-        re_path(r'^static/(?P<path>.*)$', views.serve),
-    ]

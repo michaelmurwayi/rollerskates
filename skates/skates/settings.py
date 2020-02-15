@@ -124,5 +124,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # import ipdb; ipdb.set_trace()
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'hire/static'),
+    os.path.join(BASE_DIR, '/hire/static/'),
 ]
