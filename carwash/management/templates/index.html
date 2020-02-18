@@ -1,25 +1,39 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1" />
+    <meta name="HandheldFriendly" content="true">
+
     <title>Car wash System</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
     <!-- custom styles (optional) -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{%static 'css/style.css' %}" />
   </head>
   <style>
     html,
     body {
       max-width: 100%;
       overflow-x: hidden;
+    }
+    @media screen and (min-width: 500px) {
+    body {
+        width:100%;
+    }
+  }
+
+    @media screen and (min-width: 800px) {
+      body {
+          width:100%;
+      }
     }
     .navbar {
       position: fixed;
@@ -33,7 +47,7 @@
     }
     .nav {
       position: relative;
-      left: 600px;
+      
     }
     .nav-link {
       color: black;
@@ -43,7 +57,7 @@
     .header {
       height: 300px;
       width: 100%;
-      background-image: url("img/header.jpeg");
+      background-image: url("{% static 'img/header.jpeg' %}");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -54,7 +68,7 @@
       width: 50%;
       position: relative;
       left: 300px;
-      font-family: "Courier New", Courier, monospace;
+      font-family: 'Courier New', Courier, monospace;
     }
     #services {
       margin-top: 100px;
@@ -66,12 +80,12 @@
     .contact {
       margin-top: 50px;
       width: 100%;
-      background-color: #eee;
+      background-color: whitesmoke;
     }
     .page-footer {
       text-align: center;
       width: 100%;
-      background-color: black;
+      background-color:blue;
       margin-top: 50px;
       opacity: 0.8;
     }
@@ -80,10 +94,10 @@
   <body>
 
     <div class="header"></div>
-    <div class="navigation rgba-gradient">
+    <div class="navigation  ">
       <nav class="navbar navbar-expand-sm  ">
         <!-- product logo -->
-        <img class=" logo rounded" src="img/logo.jpeg" alt="" />
+        <img class=" logo rounded" src="{% static 'img/logo.jpeg' %}" alt="" />
         <div class="collapse navbar-collapse">
           <!-- Links to other web pages -->
           <ul class="nav navbar-nav nav-tabs  ">
@@ -135,7 +149,7 @@
     
               <!-- Card image -->
               <div class="view view-cascade">
-                <img class="card-img-top" src="img/full.jpeg"
+                <img class="card-img-top" src="{% static 'img/full.jpeg' %}"
                   alt="Card image cap">
                 <a>
                   <div class="mask img-gradient"></div>
@@ -165,7 +179,7 @@
     
               <!-- Card image -->
               <div class="view view-cascade">
-                <img class="card-img-top" src="img/body.jpeg"
+                <img class="card-img-top" src="{% static 'img/body.jpeg' %}"
                   alt="Card image cap">
                 <a>
                   <div class="mask img-gradient"></div>
@@ -197,7 +211,7 @@
     
               <!-- Card image -->
               <div class="view view-cascade">
-                <img class="card-img-top" src="img/interior.jpeg"
+                <img class="card-img-top" src="{% static 'img/interior.jpeg' %}"
                   alt="Card image cap">
                 <a>
                   <div class="mask img-gradient"></div>
