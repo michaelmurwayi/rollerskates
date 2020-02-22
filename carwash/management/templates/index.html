@@ -85,7 +85,6 @@
     .page-footer {
       text-align: center;
       width: 100%;
-      background-color:blue;
       margin-top: 50px;
       opacity: 0.8;
     }
@@ -105,10 +104,10 @@
               <a class="nav-link" href="#">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html">Sign-up</a>
+              <a class="nav-link" href="{% url 'signup' %}">Sign-up</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Log-in</a>
+              <a class="nav-link" href="{% url 'login' %}">Log-in</a>
             </li>
           </ul>
           <!-- Links -->
@@ -356,7 +355,7 @@
     <!--Section: contact-->
     
     <!-- Footer -->
-    <footer class="page-footer font-small pt-5">
+    <footer class="page-footer font-small pt-5 blue-gradient">
     
       <!-- Footer Elements -->
     
