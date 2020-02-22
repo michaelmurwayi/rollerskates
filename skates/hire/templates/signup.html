@@ -27,7 +27,7 @@
     .card {
       width: 50%;
       position: relative;
-      left: 180;
+      left: 200;
       margin: 100px;
 
     }
@@ -41,7 +41,10 @@
     }
     .btn{
       position: relative;
-      left: 200px;
+      left: 250px;
+    }
+    .terms{ 
+      text-align: center;
     }
   </style>
   <body>
@@ -50,10 +53,7 @@
       <div class="card col-md-offset-2">
         <div class="panel panel-default">
           <div class="form-header blue-gradient">
-            <b
-            ><strong>
-              <p>Register Here</p>
-            </strong></b>
+            <h2 class="font-weight-bold">Register Here</h2>
           </div>
         <div class="form-content">
               {% csrf_token %}
@@ -69,11 +69,17 @@
                 {% endfor %}
               </p>
               {% endfor %}
-        </div>
-              <button class="btn btn-primary"  type="submit">Sign up</button>
-          
+            </div>
+          </form>
+
+            <button class="btn btn-outline-info"  type="submit">Sign up</button>
+          <div class="terms m-3">
+            <!-- Terms of service -->
+            <p>By clicking
+              <em>Sign up</em> you agree to our
+              <a href="" target="_blank">terms of service</a>
+            </div>
             
-            </form>
 
       </div>
     </form>
