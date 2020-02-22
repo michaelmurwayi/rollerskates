@@ -31,18 +31,22 @@
       margin: 100px;
 
     }
-    .form-header {
-      height: 50px;
+    .panel {
       text-align: center;
-      font-size: 10;
+      
+    }
+    .form-header{
+      height: 100px;
+
     }
     .form-content{
       margin: 50px;
     }
     .btn{
       position: relative;
-      left: 250px;
-    }
+      width: 50%;
+      left: 150px;
+      }
     .terms{ 
       text-align: center;
     }
@@ -51,10 +55,11 @@
     <!--Form with header-->
     <form method="post">
       <div class="card col-md-offset-2">
-        <div class="panel panel-default">
+        <div class="panel ">
           <div class="form-header blue-gradient">
-            <h3 class="font-weight-bold">Offical SignUp Page</h3>
+            <h3 class="font-weight-bold ">Offical SignUp Page</h3>
           </div>
+        </div>
         <div class="form-content">
               {% csrf_token %}
               {% for field in form %}
@@ -80,8 +85,6 @@
               <a href="" target="_blank">terms of service</a>
             </div>
             
-
-      </div>
     </form>
   </body>
 </html>
