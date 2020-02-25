@@ -3,6 +3,10 @@ from django.views.generic.base import TemplateView
 from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
+from djreservation.views import ProductReservationView
+from .models import Reservation
+
+
 # Create your views here.
 
 class HomeView(TemplateView):
@@ -20,3 +24,7 @@ class SignUpView(generic.CreateView):
             return HttpResponseRedirect('/admin/')
 
             return render(request, self.template_name, {'form': form})
+
+class CarWashReservation(ProductReservationView):
+    base_model = Reservation
+    amount_field = 'quantity'
