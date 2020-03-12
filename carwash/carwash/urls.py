@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from management.views import HomeView
 from django.views.generic import TemplateView
+from djreservation import urls as djreservation_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
