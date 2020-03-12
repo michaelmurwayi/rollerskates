@@ -9,6 +9,6 @@ urlpatterns = [
     path('signup/', views.SignUpView.as_view(), name="signup"),
     path('accounts/', include('django.contrib.auth.urls')),
     path('profile/', TemplateView.as_view(template_name="profile.html"), name="profile"),
-    path(r"^reservationroom/create/(?<pk>\d+)$", CarWashReservation.as_view())
+    path(r"^reservationroom/create/)$", CarWashReservation.as_view(), name='create_reservation')
 ]
 urlpatterns += djreservation_urls.urlpatterns
