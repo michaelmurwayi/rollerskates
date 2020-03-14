@@ -20,3 +20,7 @@ class SignUpView(generic.CreateView):
             return HttpResponseRedirect('/admin/')
 
             return render(request, self.template_name, {'form': form})
+
+
+class ProfileView(generic.TemplateView):
+    template_name= "profile.html"
