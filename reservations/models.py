@@ -11,7 +11,7 @@ class MyObject(models.Model):
         ('4', _('Mililiters')),
         ('5', _('Unit'))
     )
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=250)
     quantity = models.FloatField()
     measurement_unit = models.CharField(max_length=2, choices=CHOICES)
 

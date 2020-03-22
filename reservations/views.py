@@ -12,6 +12,7 @@ class MyObjectReservation(ProductReservationView):
 
 def reservation(request):
     list_object = MyObject.objects.all()
+    import ipdb; ipdb.set_trace()
     return render(request, 'index.html', context={
         'list_object': list_object
     })

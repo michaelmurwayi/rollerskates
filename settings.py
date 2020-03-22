@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'demoapp',
-    'management',
+    'reservations',
     'djreservation',
+    'management',
 
 ]
 
@@ -127,4 +127,3 @@ STATIC_URL = '/static/'
 DEFAULT_FROM_EMAIL = "mail@example.com"
 EMAIL_HOST = "localhost"
 EMAIL_PORT = "1025"
-LOGIN_REDIRECT_URL = '/profile'

@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from djreservation import urls as djreservation_urls
-from demoapp.views import reservation, MyObjectReservation
+from reservations.views import reservation, MyObjectReservation
 
 urlpatterns = [
     path('profile', reservation, name='profile'),
