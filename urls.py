@@ -16,10 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path, include
 from djreservation import urls as djreservation_urls
+<<<<<<< HEAD
 from demoapp.views import home, MyObjectReservation
 
 urlpatterns = [
     path('reserve/', home, name="reserve"),
+=======
+from reservations.views import reservation, MyObjectReservation
+
+urlpatterns = [
+    path('profile', reservation, name='profile'),
+>>>>>>> d3bfcdbf8821f64d0e69c97ba88df0a45d59d1ff
     path('admin/', admin.site.urls),
     re_path(r"^reservation/create/(?P<modelpk>\d+)$",
             MyObjectReservation.as_view(), name="myreservation"),

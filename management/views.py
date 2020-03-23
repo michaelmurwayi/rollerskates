@@ -24,7 +24,10 @@ class SignUpView(generic.CreateView):
             return HttpResponseRedirect('/admin/')
 
             return render(request, self.template_name, {'form': form})
+<<<<<<< HEAD
 
 class CarWashReservation(ProductReservationView):
     base_model = Reservation
     amount_field = 'quantity'
+=======
+>>>>>>> d3bfcdbf8821f64d0e69c97ba88df0a45d59d1ff
