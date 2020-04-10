@@ -10,8 +10,8 @@ class MyObjectReservation(ProductReservationView):
     extra_display_field = ['measurement_unit']  # not required
 
 
-def home(request):
+def reserve(request):
     list_object = MyObject.objects.all()
-    return render(request, 'index.html', context={
+    return render(request, 'reserve.html', context={
         'list_object': list_object
     })

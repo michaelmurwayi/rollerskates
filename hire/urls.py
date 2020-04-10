@@ -1,7 +1,7 @@
-"""demo URL Configuration
+"""skates URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+    https://docs.djangoproject.com/en/2.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,14 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path, include
-from djreservation import urls as djreservation_urls
-from demoapp.views import reserve, MyObjectReservation
+from django.urls import path, include
+from django.views.generic import TemplateView
+from hire import views
 
 urlpatterns = [
-    path('reserve/', reserve, name="reserve"),
     path('admin/', admin.site.urls),
-    re_path(r"^reservation/create/(?P<modelpk>\d+)$",
-            MyObjectReservation.as_view(), name="myreservation"),
-    path('', include("hire.urls"))
-] + djreservation_urls.urlpatterns
+    path('', TemplateView.as_view(template_name="index.html"), name="home"),
+    path('signup/', views.SignUpView.as_view(), name="signup"),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('profile/', TemplateView.as_view(template_name="profile.html"), name="profile"),
+]
