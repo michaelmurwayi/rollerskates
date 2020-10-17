@@ -29,11 +29,12 @@
         <div class="form-header blue-gradient">
           <h3><i class="fa fa-user"></i> Register:</h3>
         </div>
-
+        <form method="POST">
         <!--Body-->
         {% csrf_token %}
         {{ form }} 
         <button class="btn btn-warning" value="submit" >Submit</button>
+        </form>
     <!--/Form with header-->
   </body>
 </html>
