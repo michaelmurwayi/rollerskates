@@ -13,14 +13,6 @@ class SignUpView(generic.CreateView):
     success_url = reverse_lazy('accounts/')
     template_name = "signup.html"
 
-    def post(self, request):
-        form = self.form_class(request.post)
-        
-        if form.is_valid():
-            return HttpResponseRedirect('/admin/')
-
-            return render(request, self.template_name, {'form': form})
-
 
 class ProfileView(generic.TemplateView):
     template_name= "profile.html"
